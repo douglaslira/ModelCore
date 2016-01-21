@@ -110,7 +110,7 @@
             /**
              * Author: Douglas Lira - douglas.lira.web@gmail.com
              * add a new object type ModelCore
-             * @param data
+             * @param o
              */
             $add : function(o) {
                 this.$dataset.push(this.$new(o));
