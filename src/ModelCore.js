@@ -131,6 +131,22 @@
                 return self;
             },
 
+            /**
+             * Author: Douglas Lira - douglas.lira.web@gmail.com
+             * Update local object without running the $find() to get the updated object
+             * @param data
+             */
+            $update : function(data) {
+                var self = this;
+                data = typeof data === "undefined" ? self.$mapping : data;
+                self._cache = {};
+                for(var i in self.$mapping) {
+                    self._cache[i] = data[i];
+                    self[i] = data[i];
+                }
+                return self;
+            },
+
             $new : function(data) {
                 var self = this;
 
